@@ -21,4 +21,16 @@ public class BuscarLibro {
         }
         return m;
     }
+
+    public Libro encontrarLibro(Libro[][] m){
+        Libro mayor = m[0][0];
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                if(m[i][j].getPrecio()>mayor.getPrecio()){
+                    mayor = m[i][j];
+                }
+            }
+        }
+        return mayor;
+    }
 }
